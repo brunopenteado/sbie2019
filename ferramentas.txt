@@ -1,0 +1,37 @@
+As seguintes ferramentas foram referenciadas no artigo "Transformando dados educacionais em dados conectados":
+
+Especificação
+	Cool URI: https://www.w3.org/TR/2008/NOTE-cooluris-20081203/
+	ePing: http://eping.governoeletronico.gov.br/
+	LOV: https://lov.linkeddata.es/dataset/lov/
+	Swoogle: http://swoogle.umbc.edu/2006/
+Conversão
+	OpenRefine: http://openrefine.org/
+	D2RQ: http://d2rq.org/
+	Triplify: http://triplify.org/
+Modelagem:
+	OntoWiki: http://ontowiki.net/
+	Protégé: https://protege.stanford.edu/
+	TopBraid Composer: https://www.topquadrant.com/products/topbraid-composer/
+	SILK: http://silkframework.org
+	LIMES: http://aksw.org/Projects/LIMES.html
+	Dbpedia Spotlight: https://www.dbpedia-spotlight.org/
+	OpenCalais: http://www.opencalais.com/
+	geometry2rdf: http://mayor2.dia.fi.upm.es/oeg-upm/index.php/en/technologies/151-geometry2rdf/index.html
+	ESRI2Open: https://github.com/project-open-data/esri2open
+Publicação
+	CKAN: https://ckan.org/
+	Virtuoso: https://virtuoso.openlinksw.com/
+	Fuseki: https://jena.apache.org/documentation/fuseki2/
+	Dydra: https://dydra.com/
+	Elda: https://www.epimorphics.com/technology/elda/
+	Puelia: https://code.google.com/archive/p/puelia-php/
+	Creative Commons Choose: https://creativecommons.org/choose/?lang=pt
+	Open Data Commons: https://opendatacommons.org/licenses/index.html
+Exploração
+	Pubby: http://wifo5-03.informatik.uni-mannheim.de/pubby/
+	Disco: http://wifo5-03.informatik.uni-mannheim.de/bizer/ng4j/disco/
+	CubeViz: http://cubeviz.aksw.org/
+	SemMap: http://www.pilod.nl/wiki/SemMap
+	RapidMiner: https://marketplace.rapidminer.com/UpdateServer/faces/product_details.xhtml?productId=rmx_lod
+	Sparql R: http://linkedscience.org/tools/sparql-package-for-r/
