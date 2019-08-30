@@ -1,0 +1,218 @@
+@prefix : <http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27> .
+
+<http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://dbpedia.org/ontology/locationOf
+<http://dbpedia.org/ontology/locationOf> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain :Local ;
+                                         rdfs:range :Indicador .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :Fonte ;
+                                   rdfs:range :Indicador .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#time:Interval
+:Interval rdf:type owl:ObjectProperty ;
+          rdfs:domain :Indicador ;
+          rdfs:range :Periodo .
+
+
+###  http://www.w3.org/ns/org#member
+<http://www.w3.org/ns/org#member> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :ComunidadeEscolar ;
+                                  rdfs:range :InstituicaoEnsino .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://dbpedia.org/ontology/Units_of_measurement
+<http://dbpedia.org/ontology/Units_of_measurement> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain :Indicador ;
+                                                   rdfs:range xsd:string .
+
+
+###  http://dbpedia.org/ontology/value
+<http://dbpedia.org/ontology/value> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain :Indicador ;
+                                    rdfs:range xsd:decimal .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain :Indicador ;
+                                 rdfs:range xsd:string .
+
+
+###  http://www.w3.org/ns/org#identifier
+<http://www.w3.org/ns/org#identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain :InstituicaoEnsino ;
+                                      rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Academico
+:Academico rdf:type owl:Class ;
+           rdfs:subClassOf :IndicadorEducacional ;
+           owl:disjointWith :Censo ,
+                            :Desempenho ,
+                            :Orcamento .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Aluno
+:Aluno rdf:type owl:Class ;
+       rdfs:subClassOf :ComunidadeEscolar .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#AreaConhecimento
+:AreaConhecimento rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Censo
+:Censo rdf:type owl:Class ;
+       rdfs:subClassOf :IndicadorEducacional .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Ciclo
+:Ciclo rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#ComunidadeEscolar
+:ComunidadeEscolar rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Desempenho
+:Desempenho rdf:type owl:Class ;
+            rdfs:subClassOf :IndicadorEducacional .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Diretor
+:Diretor rdf:type owl:Class ;
+         rdfs:subClassOf :ComunidadeEscolar .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Docente
+:Docente rdf:type owl:Class ;
+         rdfs:subClassOf :ComunidadeEscolar .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#EnsinoFundamental_AnosFinais
+:EnsinoFundamental_AnosFinais rdf:type owl:Class ;
+                              rdfs:subClassOf :Ciclo .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#EnsinoFundamental_AnosIniciais
+:EnsinoFundamental_AnosIniciais rdf:type owl:Class ;
+                                rdfs:subClassOf :Ciclo .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#EnsinoMedio
+:EnsinoMedio rdf:type owl:Class ;
+             rdfs:subClassOf :Ciclo .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#EnsinoSuperior
+:EnsinoSuperior rdf:type owl:Class ;
+                rdfs:subClassOf :Ciclo .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Estado
+:Estado rdf:type owl:Class ;
+        rdfs:subClassOf :Local ;
+        owl:disjointWith :Municipio .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Fonte
+:Fonte rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Indicador
+:Indicador rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#IndicadorEducacional
+:IndicadorEducacional rdf:type owl:Class ;
+                      rdfs:subClassOf :Indicador .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#InstituicaoEnsino
+:InstituicaoEnsino rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#LinguaPortuguesa
+:LinguaPortuguesa rdf:type owl:Class ;
+                  rdfs:subClassOf :AreaConhecimento .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Local
+:Local rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Matematica
+:Matematica rdf:type owl:Class ;
+            rdfs:subClassOf :AreaConhecimento .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Municipio
+:Municipio rdf:type owl:Class ;
+           rdfs:subClassOf :Local .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Orcamento
+:Orcamento rdf:type owl:Class ;
+           rdfs:subClassOf :IndicadorEducacional .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Pais
+:Pais rdf:type owl:Class ;
+      rdfs:subClassOf :ComunidadeEscolar .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#País
+:País rdf:type owl:Class ;
+      rdfs:subClassOf :Local .
+
+
+###  http://www.semanticweb.org/brunopenteado/ontologies/2019/6/untitled-ontology-27#Periodo
+:Periodo rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Censo
+                :Desempenho
+                :Orcamento
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :EnsinoFundamental_AnosFinais
+                :EnsinoFundamental_AnosIniciais
+                :EnsinoMedio
+                :EnsinoSuperior
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
